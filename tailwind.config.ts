@@ -57,6 +57,11 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        gallery: {
+          accent: "hsl(var(--gallery-accent))",
+          "accent-foreground": "hsl(var(--gallery-accent-foreground))",
+          "card-hover": "hsl(var(--gallery-card-hover))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

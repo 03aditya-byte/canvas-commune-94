@@ -36,7 +36,14 @@ All colors MUST be HSL.
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Art Gallery Theme Colors */
+    --gallery-accent: 280 100% 70%;
+    --gallery-accent-foreground: 0 0% 100%;
+    --gallery-gradient: linear-gradient(135deg, hsl(280 100% 70%), hsl(320 100% 75%));
+    --gallery-card-hover: 0 0% 98%;
+    --gallery-shadow: 0 10px 30px -5px hsl(280 100% 70% / 0.1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -53,6 +60,11 @@ All colors MUST be HSL.
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Art Gallery Theme Colors - Light Mode */
+    --gallery-accent: 280 100% 70%;
+    --gallery-accent-foreground: 0 0% 100%;  
+    --gallery-card-hover: 0 0% 98%;
   }
 
   .dark {
@@ -91,7 +103,43 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    /* Art Gallery Theme Colors - Dark Mode */
+    --gallery-accent: 280 100% 75%;
+    --gallery-accent-foreground: 222.2 84% 4.9%;
+    --gallery-card-hover: 217.2 32.6% 20%;
   }
+}
+
+/* Custom animations for gallery */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.3s ease-out;
 }
 
 @layer base {
